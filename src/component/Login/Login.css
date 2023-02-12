@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Poppins:wght@200&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.LoginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 418px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 500px;
+    margin-top: 142px;
+    border-radius: 2px;
+
+}
+
+.Vector {
+
+    background: #6A5ACD;
+    padding: 12px;
+    background: #6A5ACD;
+    box-shadow: 0px 0px 4px rgba(176, 16, 48, 0.3);
+    border-radius: 250px;
+
+}
+
+.Input-box1 {
+    width: 420px;
+    height: 55px;
+
+    border: #B0ACAC 1.5px solid;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.Input-box2 {
+    width: 420px;
+    margin-top: 15px;
+    height: 55px;
+    border: #B0ACAC 1.5px solid;
+    border-radius: 5px;
+}
+
+.Sign-in-btn {
+    width: 420px;
+    margin-top: 15px;
+    height: 55px;
+    background: #006FBB;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    border: none;
+    border-radius: 5px;
+
+
+    color: #FFFFFF;
+
+
+}
+
+.Sign-in-btn-glg {
+    width: 420px;
+    margin-top: 15px;
+    height: 55px;
+    background: #006FBB;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+
+    color: #FFFFFF;
+}
+.Googlelogo
+{
+    width:30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    padding-right: 1px;
+}
+
+.footer-signup-link {
+    padding-top: 20.5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-signup-link a {
+    text-decoration: none;
+    color: #1473E6;
+}
