@@ -1,25 +1,22 @@
-.Btn-signin
-{
-    background: #006FBB;
-    color: #FFFFFF;
-    width: 100px;
-    height: 41px;
-    border:none;
-    border-radius: 5px;
-    margin-right: 11px;
+.Btn-signin {
+  background: #006fbb;
+  color: #ffffff;
+  width: 100px;
+  height: 41px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 11px;
 }
-.NavBarConatiner
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    height: 67.27px;
+.NavBarConatiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  height: 67.27px;
 }
-.Logo
-{
-    width: 128.49px;
-    height: 50px;
-    padding-left: 10px;
-    padding-top: 8.5px;
+.Logo {
+  width: 128.49px;
+  height: 50px;
+  padding-left: 10px;
+  padding-top: 8.5px;
 }

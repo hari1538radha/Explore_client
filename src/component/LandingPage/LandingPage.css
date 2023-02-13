@@ -1,242 +1,233 @@
 .Btn-signin-landing {
-    background: #EE0000;
-    color: #FFFFFF;
-    width: 66px;
-    height: 42px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 11px;
+  background: #ee0000;
+  color: #ffffff;
+  width: 66px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 11px;
 }
 
 .NavBarConatiner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    height: 67.27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  height: 67.27px;
 }
 
 .Logo {
-    width: 128.49px;
-    height: 50px;
-    padding-left: 10px;
-    padding-top: 8.5px;
+  width: 128.49px;
+  height: 50px;
+  padding-left: 10px;
+  padding-top: 8.5px;
 }
 
 .UserName {
-    color: black;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 15px;
+  color: black;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 15px;
 }
 
 .UserName_block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .User_image_Block {
-    background: #6A5ACD;
-    box-shadow: 0px 0px 4px rgba(176, 16, 48, 0.3);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: -23px;
+  background: #6a5acd;
+  box-shadow: 0px 0px 4px rgba(176, 16, 48, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -23px;
 }
 
 .col {
-    width: 253px;
-    height: 310px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    border-radius: 40px;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
+  width: 253px;
+  height: 310px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .col:hover {
-    transition: 0.5s;
-    transform: scale(1.12, 1.12);
-    z-index: 2;
-    box-shadow: none;
-    border-radius: initial;
+  transition: 0.5s;
+  transform: scale(1.12, 1.12);
+  z-index: 2;
+  box-shadow: none;
+  border-radius: initial;
 }
 
 .Searchby-name:focus {
-    background-color: black;
-    color: white;
-    padding-left: 15px;
-
+  background-color: black;
+  color: white;
+  padding-left: 15px;
 }
 
 .searchby-tags:focus {
-    background-color: black;
-    color: white;
-    padding-left: 15px;
+  background-color: black;
+  color: white;
+  padding-left: 15px;
 }
 
 #cards {
-    width: 1100px;
-    margin-top: 40px;
-    margin-left: 17px;
-    margin-bottom: 29px;
-    gap: 10px;
-    row-gap: 29px;
-    position: relative;
-
+  width: 1100px;
+  margin-top: 40px;
+  margin-left: 17px;
+  margin-bottom: 29px;
+  gap: 10px;
+  row-gap: 29px;
+  position: relative;
 }
 
 .card-title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .card-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 16px;
-    color: #B0ACAC;
-
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #b0acac;
 }
 
 .card-img-top {
-    height: 143px;
-
+  height: 143px;
 }
 
 .Search_block {
-
-    display: flex;
-    padding: 20px;
-    border-radius: 5px;
-    justify-content: center;
-    flex-direction: column;
-    width: 339px;
-    height: 206px;
-    gap: 13px;
-    margin-top: 41px;
-    margin-bottom: 12px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  width: 339px;
+  height: 206px;
+  gap: 13px;
+  margin-top: 41px;
+  margin-bottom: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .Upload_Block {
-    display: flex;
-    gap: 13px;
-    flex-direction: column;
-    width: 339px;
-    height: 420px;
-    margin-bottom: 12px;
-    padding: 20px;
-    border-radius: 5px;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+  width: 339px;
+  height: 420px;
+  margin-bottom: 12px;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .Upload_Header {
-    position: absolute;
-    top: 8px;
-    left: 110px;
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 11.6883px;
-    line-height: 18px;
-
+  position: absolute;
+  top: 8px;
+  left: 110px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11.6883px;
+  line-height: 18px;
 }
 
 .Message_Text {
-    height: 110px;
+  height: 110px;
 }
 
 button.btn_searchs {
-    background: #006FBB;
-    width: 300px;
-    height: 39px;
-    border-radius: 5px;
-    border: none;
-    color: white;
+  background: #006fbb;
+  width: 300px;
+  height: 39px;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 .Search_box {
-    width: 330px;
-    height: 39px;
-    border-radius: 5px;
-    margin-top: 31px;
-
+  width: 330px;
+  height: 39px;
+  border-radius: 5px;
+  margin-top: 31px;
 }
 
 button.btn.btn-primary {
-    background: #006FBB;
-    width: 300px;
-    height: 39px;
-    border-radius: 5px;
-    border: none;
-    color: white;
+  background: #006fbb;
+  width: 300px;
+  height: 39px;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 button {
-    background: #D7373F;
-    width: 300px;
-    height: 24px;
-    border-radius: 5px;
-    border: none;
-    color: white;
+  background: #d7373f;
+  width: 300px;
+  height: 24px;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 .Search_box_Tag {
-    width: 330px;
-    height: 39px;
-    border-radius: 5px;
-    margin-bottom: 12px;
+  width: 330px;
+  height: 39px;
+  border-radius: 5px;
+  margin-bottom: 12px;
 }
 
 .Main_Container {
-    display: flex;
-    margin-left: 25px;
+  display: flex;
+  margin-left: 25px;
 }
 
 .Upload_Title {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .Tags {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10.7586px;
-    line-height: 16px;
-    color: #B0ACAC;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10.7586px;
+  line-height: 16px;
+  color: #b0acac;
 }
 
 h3.card-title {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .limit-input {
-
-    width: 40px;
-    height: 10px;
-    position: absolute;
-    top: 95%;
-    left: 75%;
-    margin-bottom: 20px;
+  width: 40px;
+  height: 10px;
+  position: absolute;
+  top: 95%;
+  left: 75%;
+  margin-bottom: 20px;
 }

@@ -1,152 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Poppins:wght@200&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .SignupContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 440px;
-    height: 580px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-left: 500px;
-    margin-top: 96px;
-    border-radius: 2px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 440px;
+  height: 580px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 500px;
+  margin-top: 96px;
+  border-radius: 2px;
 }
 
 .signup {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .signuplogo {
-
-
-    margin-top: 17.25px;
-    background: #6A5ACD;
-    padding: 11px;
-    background: #6A5ACD;
-    box-shadow: 0px 0px 4px rgba(176, 16, 48, 0.3);
-    border-radius: 250px;
-
+  margin-top: 17.25px;
+  background: #6a5acd;
+  padding: 11px;
+  background: #6a5acd;
+  box-shadow: 0px 0px 4px rgba(176, 16, 48, 0.3);
+  border-radius: 250px;
 }
 
 .name {
-    display: flex;
-    gap: 18px;
-
+  display: flex;
+  gap: 18px;
 }
 
-
 .box1 {
-    width: 201px;
-    height: 55px;
-    border: #B0ACAC 1.5px solid;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-left: 2px;
-
+  width: 201px;
+  height: 55px;
+  border: #b0acac 1.5px solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 2px;
 }
 
 .box2 {
-    width: 201px;
-    margin-top: 20px;
-    height: 55px;
-    border: #B0ACAC 1.5px solid;
-    border-radius: 5px;
+  width: 201px;
+  margin-top: 20px;
+  height: 55px;
+  border: #b0acac 1.5px solid;
+  border-radius: 5px;
 }
 
-
 .box3 {
-    width: 420px;
-    height: 55px;
-    border: #B0ACAC 1.5px solid;
-    border-radius: 5px;
-    margin-top: 15px;
+  width: 420px;
+  height: 55px;
+  border: #b0acac 1.5px solid;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
 .box4 {
-    width: 420px;
-    margin-top: 15px;
-    height: 55px;
-    border: #B0ACAC 1.5px solid;
-    border-radius: 5px;
+  width: 420px;
+  margin-top: 15px;
+  height: 55px;
+  border: #b0acac 1.5px solid;
+  border-radius: 5px;
 }
 
 .box5 {
-    width: 420px;
-    margin-top: 15px;
-    height: 55px;
-    border: #B0ACAC 1.5px solid;
-    border-radius: 5px;
+  width: 420px;
+  margin-top: 15px;
+  height: 55px;
+  border: #b0acac 1.5px solid;
+  border-radius: 5px;
 }
 
 .Sign-in-btn {
-    width: 420px;
-    margin-top: 15px;
-    height: 55px;
-    background: #006FBB;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+  width: 420px;
+  margin-top: 15px;
+  height: 55px;
+  background: #006fbb;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 
-
-    color: #FFFFFF;
-
-
+  color: #ffffff;
 }
 
 .Sign-in-btn-glg {
-    width: 420px;
-    margin-top: 15px;
-    height: 55px;
-    background: #006FBB;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+  width: 420px;
+  margin-top: 15px;
+  height: 55px;
+  background: #006fbb;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 
-
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .Googlelogo {
-    width: 30px;
-    padding-right: 5px;
+  width: 30px;
+  padding-right: 5px;
 }
 
 .Login-link {
-    padding-top: 20.5px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 24px;
+  padding-top: 20.5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .Login-link a {
-    text-decoration: none;
-    color: #1473E6;
+  text-decoration: none;
+  color: #1473e6;
 }
 
 input {
-    text-align: left;
-    padding: 5px;
+  text-align: left;
+  padding: 5px;
 }
