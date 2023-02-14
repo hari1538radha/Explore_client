@@ -2,16 +2,15 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getUser = createAsyncThunk("User", async (data) => {
   console.log(data);
-  const result = fetch(`http://localhost:5000/authenticate/login`, {
+  const result = fetch(`https://quaint-jeans-fly.cyclic.app/authenticate/login`, {
     method: "get",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       userEmail: data.email,
       userPassword: data.pass,
-      
+      console.log(userEmail)
     }),
   }).then((res) => {
-    console.log(data.email,data.pass)
     return res.json();
   });
   return result;
