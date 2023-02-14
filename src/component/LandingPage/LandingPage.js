@@ -9,30 +9,12 @@ import { Displaydata } from "../../Redux/Slice/DisplayData";
 import { SearchData } from "../../Redux/Slice/SearchSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { UploadData } from "../../Redux/Slice/UploadSlice";
-import moment from "moment";
+import AWS from "aws-sdk";
 
 const LandingPage = () => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const [mainData, setData] = useState("");
-  const upload = (e) => {
-    e.preventDefault();
-    const ele = e.target.elements;
-    const placeName = ele[0].value;
-    const placeDescription = ele[1].value;
-    const placeTag = ele[2].value;
-    const placeImage = ele[3].files;
-    console.log({ placeName, placeDescription, placeTag, placeImage });
-    dispatch(UploadData({ placeName, placeDescription, placeTag, placeImage }));
-    ele[0].value = "";
-    ele[1].value = "";
-    ele[2].value = "";
-    ele[3].value = "";
-  };
-  const { Details, loadinguser } = useSelector((state) => state.uploaddata);
-  useEffect(() => {
-    setData(Details);
-  }, [Details]);
 
   useEffect(() => {
     dispatch(Displaydata(0));
@@ -64,9 +46,73 @@ const LandingPage = () => {
   };
   const { data, loadings } = useSelector((state) => state.Search);
   console.log(data);
+  const [progress, setProgress] = useState(0);
+  const [filename, setFileName] = useState();
+  const [AWSImagelink, setLink] = useState("");
 
+  const HandelFilePath = (e) => {
+    const file = e.target.files[0];
+    const fileName = e.target.files[0].name;
+    setFileName(fileName);
+
+    const accessKeyId = process.env.REACT_APP_AWS_ACCESS_KEY;
+    const secretAccessKeys = process.env.REACT_APP_AWS_SECRET_ACCESS_KEY;
+    //
+    AWS.config.update({
+      accessKeyId: accessKeyId,
+      secretAccessKey: secretAccessKeys,
+    });
+
+    const myBucket = new AWS.S3({
+      params: { Bucket: process.env.REACT_APP_AWS_RESUME_FOLDER },
+      region: "eu-west-2",
+    });
+    const params = {
+      ACL: "public-read",
+      Body: file,
+      Bucket: process.env.REACT_APP_AWS_RESUME_FOLDER,
+      Key: fileName,
+    };
+
+    myBucket
+      .putObject(params)
+      .on("success", (pro) => {
+        if (pro?.request?.httpRequest?.stream?.responseURL)
+          setLink(pro?.request?.httpRequest?.stream?.responseURL);
+      })
+      .on("httpUploadProgress", (evt) => {
+        console.log(evt);
+        setProgress(Math.round((evt.loaded / evt.total) * 100));
+      })
+      .send((err) => {
+        if (err) console.log(err);
+      });
+
+    useEffect(() => {
+      if (progress === 100) {
+        console.log("done");
+      }
+    }, [progress]);
+  };
   console.log(Display.placeImag);
-
+  const upload = (e) => {
+    e.preventDefault();
+    const ele = e.target.elements;
+    const placeName = ele[0].value;
+    const placeDescription = ele[1].value;
+    const placeTag = ele[2].value;
+    console.log({ placeName, placeDescription, placeTag, AWSImagelink });
+    dispatch(
+      UploadData({ placeName, placeDescription, placeTag, AWSImagelink })
+    );
+    ele[0].value = "";
+    ele[1].value = "";
+    ele[2].value = "";
+  };
+  const { Details, loadinguser } = useSelector((state) => state.uploaddata);
+  useEffect(() => {
+    setData(Details);
+  }, [Details]);
   return (
     <>
       <div className="NavBarConatiner">
@@ -142,7 +188,12 @@ const LandingPage = () => {
                 required={true}
               ></input>
               <input type="text" placeholder="  Tags *" required={true}></input>
-              <input type="file" required={true}></input>
+              <input
+                type="file"
+                required={true}
+                onChange={HandelFilePath}
+                accept="image/png, image/jpeg, images/jpg"
+              ></input>
               <button className="btn btn-primary" type="submit">
                 SUBMIT
               </button>

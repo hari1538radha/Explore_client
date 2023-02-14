@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const Displaydata = createAsyncThunk("displayData", async (page) => {
   const response = fetch(
-    `https://quaint-jeans-fly.cyclic.app/authenticate/home?page=${page}&limit=1`
+    `https://quaint-jeans-fly.cyclic.app/authenticate/home?page=${page}&limit=10`
   ).then((res) => {
     return res.json();
   });

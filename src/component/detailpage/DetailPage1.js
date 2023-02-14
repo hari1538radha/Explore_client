@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { card } from "react-bootstrap";
 import "./DetailPage.css";
 const DetailsPage = () => {
+
   return (
     <div className="outer">
       <div className="content">
