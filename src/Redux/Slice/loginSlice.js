@@ -8,7 +8,7 @@ export const getUser = createAsyncThunk("User", async (data) => {
     body: JSON.stringify({
       userEmail: data.email,
       userPassword: data.pass,
-      console.log(userEmail)
+ 
     }),
   }).then((res) => {
     return res.json();
