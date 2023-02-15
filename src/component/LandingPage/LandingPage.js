@@ -48,7 +48,7 @@ const LandingPage = () => {
   console.log(data);
   const [progress, setProgress] = useState(0);
   const [filename, setFileName] = useState();
-  const [AWSImagelink, setLink] = useState("");
+  const [placeImage, setLink] = useState("");
 
   const HandelFilePath = (e) => {
     const file = e.target.files[0];
@@ -101,9 +101,9 @@ const LandingPage = () => {
     const placeName = ele[0].value;
     const placeDescription = ele[1].value;
     const placeTag = ele[2].value;
-    console.log({ placeName, placeDescription, placeTag, AWSImagelink });
+    console.log({ placeName, placeDescription, placeTag, placeImage });
     dispatch(
-      UploadData({ placeName, placeDescription, placeTag, AWSImagelink })
+      UploadData({ placeName, placeDescription, placeTag, placeImage })
     );
     ele[0].value = "";
     ele[1].value = "";
