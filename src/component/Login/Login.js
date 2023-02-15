@@ -19,13 +19,13 @@ const Login = () => {
     const userEmail = ele[0].value;
     const userPassword = ele[1].value;
     dispatch(getUser( {userEmail, userPassword} ));
-    // ele[0].value = "";
-    // ele[1].value = "";
+    ele[0].value = "";
+    ele[1].value = "";
   };
   const { loginData, loading } = useSelector((state) => state.User);
-  console.log(loginData.data);
+  console.log(loginData?.data);
   useEffect(() => {
-    if (loginData.data.message== "Valid password") {
+    if (loginData?.data?.message == "Valid password") {
       window.alert(" Login is Success");
       Navigate("/LandingPage");
     } else {
