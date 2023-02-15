@@ -12,20 +12,21 @@ const Login = () => {
   const Navigate = useNavigate();
   const dispatch = useDispatch();
   const [Error, setError] = useState("");
-  const { loginData, loading } = useSelector((state) => state.User);
-  console.log(loginData);
+  
   const signIn = (e) => {
     e.preventDefault();
     const ele = e.target.elements;
-    const email = ele[0].value;
-    const pass = ele[1].value;
-    dispatch(getUser({ email, pass }));
+    const userEmail = ele[0].value;
+    const userPassword = ele[1].value;
+    dispatch(getUser( {userEmail, userPassword} ));
     // ele[0].value = "";
     // ele[1].value = "";
   };
+  const { loginData, loading } = useSelector((state) => state.User);
+  console.log(loginData.data);
   useEffect(() => {
-    if (loginData.message) {
-      window.alert(" Login is Sucess");
+    if (loginData.data.message== "Valid password") {
+      window.alert(" Login is Success");
       Navigate("/LandingPage");
     } else {
       setError("");

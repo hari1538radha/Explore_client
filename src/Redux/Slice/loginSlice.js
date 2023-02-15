@@ -1,14 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Axios } from "../../component/Config/Config.js";
-export const getUser = createAsyncThunk("User", async (data) => {
+import { Axios } from "../../component/Config/Config";
+export const getUser = createAsyncThunk("userdatas", async (data) => {
   console.log(data);
-  return Axios.get("/authenticate/login", data);
-  // const result = fetch(
-  //   ``,data
-  // ).then((res) => {
-  //   return res.json();
-  // });
-  // return result;
+  return Axios.post("/authenticate/login",data);
 });
 
 export const logReducer = createSlice({
