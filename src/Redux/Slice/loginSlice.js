@@ -1,23 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import { Axios } from "../../component/Config/Config.js";
 export const getUser = createAsyncThunk("User", async (data) => {
   console.log(data);
-  const result = fetch(`https://quaint-jeans-fly.cyclic.app/authenticate/login`, {
-    method: "get",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      userEmail: data.email,
-      userPassword: data.pass,
- 
-    }),
-  }).then((res) => {
-    return res.json();
-  });
-  return result;
+  return Axios.get("/authenticate/login", data);
+  // const result = fetch(
+  //   ``,data
+  // ).then((res) => {
+  //   return res.json();
+  // });
+  // return result;
 });
 
 export const logReducer = createSlice({
-  name: "userdata",
+  name: "User",
   initialState: {
     loginData: [],
     loading: false,
