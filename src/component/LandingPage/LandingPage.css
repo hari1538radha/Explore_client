@@ -132,10 +132,10 @@
 
 .Upload_Block {
   display: flex;
-  gap: 13px;
+  gap: 8px;
   flex-direction: column;
   width: 339px;
-  height: 420px;
+  height: 450px;
   margin-bottom: 12px;
   padding: 20px;
   border-radius: 5px;
