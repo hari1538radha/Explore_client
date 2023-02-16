@@ -9,6 +9,7 @@ import { Displaydata } from "../../Redux/Slice/DisplayData";
 import { SearchData } from "../../Redux/Slice/SearchSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { UploadData } from "../../Redux/Slice/UploadSlice";
+import loader from "../Images/copper-loader.gif";
 import AWS from "aws-sdk";
 
 const LandingPage = () => {
@@ -24,7 +25,7 @@ const LandingPage = () => {
     const page = data.selected;
     dispatch(Displaydata(page));
   };
-  const { Display, loading } = useSelector((state) => state.Displaydata);
+  const { Display, loadingdata } = useSelector((state) => state.Displaydata);
   useEffect(() => {
     setData(Display);
   }, [Display]);
@@ -106,10 +107,9 @@ const LandingPage = () => {
     ele[0].value = "";
     ele[1].value = "";
     ele[2].value = "";
-   
   };
   const { Details, loadinguser } = useSelector((state) => state.uploaddata);
-  const { loginData, loadingdata } = useSelector((state) => state.User);
+  const { loginData, loginloading } = useSelector((state) => state.User);
   console.log(loginData?.data?.username);
   useEffect(() => {
     setData(Details);
@@ -130,7 +130,16 @@ const LandingPage = () => {
       </div>
       <div className="Main_Container">
         <div className="row row-cols-1 row-cols-md-3 g-4" id="cards">
-          {" "}
+          {
+            <div className="loader">
+              {loadingdata == true && (
+                <div className="loader-class">
+                  <h1>Loading Data....!</h1>
+                  <img src={loader}></img>
+                </div>
+              )}
+            </div>
+          }{" "}
           {mainData.length > 0 &&
             mainData.map((obj) => {
               return (
@@ -157,6 +166,7 @@ const LandingPage = () => {
                   <p className="place">{obj.placeName}</p>
                   <p class="suggest-description">{obj.placeDescription}</p>
                 </div>
+
                 // <div
                 //   className="col"
 
@@ -218,7 +228,11 @@ const LandingPage = () => {
                 accept="image/png, image/jpeg, images/jpg"
               ></input>
               <progress defaultValue={0} value={progress}></progress>
-              <p>{ (progress < 100 && progress > 1 ) && <p>image Uploading wait !!!</p>}</p>
+              <p>
+                {progress < 100 && progress > 1 && (
+                  <p>image Uploading wait !!!</p>
+                )}
+              </p>
               <p>{progress == 100 && <p>image uploaded please submit</p>}</p>
 
               <button className="btn btn-primary" type="submit">

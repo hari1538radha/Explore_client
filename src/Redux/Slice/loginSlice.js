@@ -9,19 +9,21 @@ export const logReducer = createSlice({
   name: "User",
   initialState: {
     loginData: [],
-    loadingdata: false,
+    loginloading: false,
   },
   reducer: {},
   extraReducers: {
     [getUser.pending]: (state, action) => {
-      state.loading = true;
+      state.loginloading = true;
     },
     [getUser.fulfilled]: (state, action) => {
       console.log(action.payload);
       state.loginData = action.payload;
-      state.loading = false;
+      state.loginloading = false;
     },
-    [getUser.rejected]: (state, action) => {},
+    [getUser.rejected]: (state, action) => {
+      state.loginloading = true
+    },
   },
 });
 

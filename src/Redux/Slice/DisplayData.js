@@ -14,20 +14,20 @@ export const DisplayDatareducer = createSlice({
   name: "displayData",
   initialState: {
     Display: [],
-    loading: false,
+    loadingdata: false,
   },
 
   reducers: {},
   extraReducers: {
     [Displaydata.pending]: (state, action) => {
-      state.loading = true;
+      state.loadingdata = true;
     },
     [Displaydata.fulfilled]: (state, action) => {
       state.Display = action.payload.data;
-      state.loading = false;
+      state.loadingdata = false;
     },
     [Displaydata.rejected]: (state, action) => {
-      state.loading = false;
+      state.loadingdata = true;
     },
   },
 });
