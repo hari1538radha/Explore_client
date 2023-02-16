@@ -102,9 +102,7 @@ const LandingPage = () => {
     const placeDescription = ele[1].value;
     const placeTag = ele[2].value;
     console.log({ placeName, placeDescription, placeTag, placeImage });
-    dispatch(
-      UploadData({ placeName, placeDescription, placeTag, placeImage })
-    );
+    dispatch(UploadData({ placeName, placeDescription, placeTag, placeImage }));
     ele[0].value = "";
     ele[1].value = "";
     ele[2].value = "";
@@ -135,30 +133,32 @@ const LandingPage = () => {
           {mainData.length > 0 &&
             mainData.map((obj) => {
               return (
-                <div class="container"
-                key={obj._id}
-                  onClick={(e) => handleDetailpage(e)}>
-                <img
-                  class="suggest-image"
-                  src={obj.placeImage}
-                  alt="suggest"
-                />
-                <div class="top-left">
-                  <p>
-                  {loginData?.data?.username}<br /><moment>({obj.createdAt})</moment>
-                  </p>
+                <div
+                  class="container"
+                  key={obj._id}
+                  onClick={(e) => handleDetailpage(e)}
+                >
+                  <img
+                    class="suggest-image"
+                    src={obj.placeImage}
+                    alt="suggest"
+                  />
+                  <div class="top-left">
+                    <p>
+                      {loginData?.data?.username}
+                      <br />
+                      <moment>({obj.createdAt})</moment>
+                    </p>
+                  </div>
+                  <div className="hashtags">
+                    <p>{obj.placeTag}</p>
+                  </div>
+                  <p className="place">{obj.placeName}</p>
+                  <p class="suggest-description">{obj.placeDescription}</p>
                 </div>
-                <div className="hashtags">
-                  <p>{obj.placeTag}</p>
-                </div>
-                <p className="place">{obj.placeName}</p>
-                <p class="suggest-description">
-                {obj.placeDescription}
-                </p>
-              </div>
                 // <div
                 //   className="col"
-                  
+
                 // >
                 //   <div className="card h-100">
                 //     <img className="card-img-top" />
@@ -166,7 +166,7 @@ const LandingPage = () => {
                 //       <p className="Tags"></p>
                 //       <h3 className="card-title"></h3>
                 //       <p className="card-text"></p>
-                      
+
                 //     </div>
                 //   </div>
                 // </div>
@@ -217,6 +217,9 @@ const LandingPage = () => {
                 accept="image/png, image/jpeg, images/jpg"
               ></input>
               <progress defaultValue={0} value={progress}></progress>
+              <p>{ (progress <= 100 && progress >= 1 ) && <p>image Uploading wait !!!</p>}</p>
+              <p>{progress == 100 && <p>image uploaded please submit</p>}</p>
+
               <button className="btn btn-primary" type="submit">
                 SUBMIT
               </button>
