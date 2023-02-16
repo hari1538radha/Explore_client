@@ -217,7 +217,7 @@ const LandingPage = () => {
                 accept="image/png, image/jpeg, images/jpg"
               ></input>
               <progress defaultValue={0} value={progress}></progress>
-              <p>{ (progress <= 100 && progress >= 1 ) && <p>image Uploading wait !!!</p>}</p>
+              <p>{ (progress < 100 && progress > 1 ) && <p>image Uploading wait !!!</p>}</p>
               <p>{progress == 100 && <p>image uploaded please submit</p>}</p>
 
               <button className="btn btn-primary" type="submit">
