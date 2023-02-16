@@ -216,7 +216,7 @@ const LandingPage = () => {
                 onChange={HandelFilePath}
                 accept="image/png, image/jpeg, images/jpg"
               ></input>
-              <progress className="progress" defaultValue="0" value={progress}></progress>
+              <progress defaultValue={0} value={progress}></progress>
               <button className="btn btn-primary" type="submit">
                 SUBMIT
               </button>
