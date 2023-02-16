@@ -141,6 +141,16 @@ const LandingPage = () => {
               )}
             </div>
           }{" "}
+           {/* {
+            <div className="loader">
+              { loadingdata == false  (
+                <div className="loader-class">
+                  <h1>Loading Datsgegvrzeaa....!</h1>
+                  <img src={loader}></img>
+                </div>
+              )}
+            </div>
+          } */}
           {mainData.length > 0 &&
             mainData.map((obj) => {
               return (

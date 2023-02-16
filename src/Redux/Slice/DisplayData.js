@@ -14,7 +14,7 @@ export const DisplayDatareducer = createSlice({
   name: "displayData",
   initialState: {
     Display: [],
-    loadingdata: false,
+    loadingdata: true,
   },
 
   reducers: {},
