@@ -89,17 +89,18 @@ git
 
 .suggest-description {
     margin-top: 25px;
-    padding-top: 25px;
+    padding-top: 20px;
     text-align: justify;
     position: absolute;
     width: 231px;
-    height: 68px;
+    height: 130px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 11px;
     line-height: 16px;
     color: #B0ACAC;
+    overflow-y: hidden;
 }
 
 .hashtags {
@@ -149,6 +150,7 @@ git
     width: 195px;
     height: 30px;
     margin-top: 16px;
+    padding-bottom: 50px;
     text-align: justify;
     margin-bottom: 11px;
     font-family: 'Poppins';
