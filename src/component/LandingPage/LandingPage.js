@@ -120,9 +120,9 @@ const LandingPage = () => {
       <div className="NavBarConatiner">
         <img className="Logo" src={Logo} />
         <div className="UserName_block">
-          <div className="User_image_Block">
+          {/* <div className="User_image_Block">
             <img src={logOutLogo} className="user_Image"></img>
-          </div>
+          </div> */}
           <p className="UserName">User</p>
           <button className="Btn-signin-landing">
             <img src={logOutLogo}></img>
