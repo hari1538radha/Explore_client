@@ -23,6 +23,7 @@ const LandingPage = () => {
 
   const handelPageChange = (data) => {
     const page = data.selected;
+    setData([]);
     dispatch(Displaydata(page));
   };
   const { Display, loadingdata } = useSelector((state) => state.Displaydata);
