@@ -106,7 +106,7 @@ const LandingPage = () => {
     ele[0].value = "";
     ele[1].value = "";
     ele[2].value = "";
-    dispatch(Displaydata(1));
+   
   };
   const { Details, loadinguser } = useSelector((state) => state.uploaddata);
   const { loginData, loadingdata } = useSelector((state) => state.User);
