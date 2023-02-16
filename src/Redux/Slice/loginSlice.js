@@ -9,7 +9,7 @@ export const logReducer = createSlice({
   name: "User",
   initialState: {
     loginData: [],
-    loading: false,
+    loadingdata: false,
   },
   reducer: {},
   extraReducers: {

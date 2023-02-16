@@ -110,6 +110,8 @@ const LandingPage = () => {
     ele[2].value = "";
   };
   const { Details, loadinguser } = useSelector((state) => state.uploaddata);
+  const { loginData, loadingdata } = useSelector((state) => state.User);
+  console.log(loginData?.data?.username);
   useEffect(() => {
     setData(Details);
   }, [Details]);
@@ -133,21 +135,41 @@ const LandingPage = () => {
           {mainData.length > 0 &&
             mainData.map((obj) => {
               return (
-                <div
-                  className="col"
-                  key={obj._id}
-                  onClick={(e) => handleDetailpage(e)}
-                >
-                  <div className="card h-100">
-                    <img className="card-img-top" />
-                    <div className="card-body">
-                      <p className="Tags">{obj.placeTag}</p>
-                      <h3 className="card-title">{obj.placeName}</h3>
-                      <p className="card-text">{obj.placeDescription}</p>
-                      <moment>({obj.createdAt})</moment>
-                    </div>
-                  </div>
+                <div class="container"
+                key={obj._id}
+                  onClick={(e) => handleDetailpage(e)}>
+                <img
+                  class="suggest-image"
+                  src={obj.placeImage}
+                  alt="suggest"
+                />
+                <div class="top-left">
+                  <p>
+                  {loginData?.data?.username}<br /><moment>({obj.createdAt})</moment>
+                  </p>
                 </div>
+                <div className="hashtags">
+                  <p>{obj.placeTag}</p>
+                </div>
+                <p className="place">{obj.placeName}</p>
+                <p class="suggest-description">
+                {obj.placeDescription}
+                </p>
+              </div>
+                // <div
+                //   className="col"
+                  
+                // >
+                //   <div className="card h-100">
+                //     <img className="card-img-top" />
+                //     <div className="card-body">
+                //       <p className="Tags"></p>
+                //       <h3 className="card-title"></h3>
+                //       <p className="card-text"></p>
+                      
+                //     </div>
+                //   </div>
+                // </div>
               );
             })}
         </div>
