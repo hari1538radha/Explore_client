@@ -33,7 +33,8 @@ const LandingPage = () => {
   console.log(Display);
 
   const handleDetailpage = (e) => {
-    console.log(e);
+    e.preventDefault();
+    console.log(e.target.id);
   };
 
   const handleSearch = (e) => {
@@ -156,42 +157,32 @@ const LandingPage = () => {
               return (
                 <div
                   class="container"
-                  key={obj._id}
+                  id={obj._id}
                   onClick={(e) => handleDetailpage(e)}
                 >
                   <img
                     class="suggest-image"
                     src={obj.placeImage}
+                    id={obj._id}
                     alt="suggest"
                   />
                   <div class="top-left">
-                    <p>
+                    <p id={obj._id}>
                       {loginData?.data?.username}
                       <br />
-                      <moment>({obj.createdAt})</moment>
+                      <moment id={obj._id}>({obj.createdAt})</moment>
                     </p>
                   </div>
-                  <div className="hashtags">
-                    <p>{obj.placeTag}</p>
+                  <div id={obj._id} className="hashtags">
+                    <p id={obj._id}>{obj.placeTag}</p>
                   </div>
-                  <p className="place">{obj.placeName}</p>
-                  <p class="suggest-description">{obj.placeDescription}</p>
+                  <p id={obj._id} className="place">
+                    {obj.placeName}
+                  </p>
+                  <p id={obj._id} class="suggest-description">
+                    {obj.placeDescription}
+                  </p>
                 </div>
-
-                // <div
-                //   className="col"
-
-                // >
-                //   <div className="card h-100">
-                //     <img className="card-img-top" />
-                //     <div className="card-body">
-                //       <p className="Tags"></p>
-                //       <h3 className="card-title"></h3>
-                //       <p className="card-text"></p>
-
-                //     </div>
-                //   </div>
-                // </div>
               );
             })}
         </div>
