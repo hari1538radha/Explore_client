@@ -141,7 +141,7 @@ const LandingPage = () => {
               )}
             </div>
           }{" "}
-           {/* {
+          {/* {
             <div className="loader">
               { loadingdata == false  (
                 <div className="loader-class">

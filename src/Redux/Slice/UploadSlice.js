@@ -2,8 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Axios } from "../../component/Config/Config";
 export const UploadData = createAsyncThunk("uploadData", async (data) => {
   console.log(data.placeName);
-return Axios.post("/authenticate/upload",data)
-  
+  return Axios.post("/authenticate/upload", data);
 });
 console.log(UploadData);
 export const UploadReducer = createSlice({

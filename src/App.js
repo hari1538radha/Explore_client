@@ -1,6 +1,6 @@
-import './App.css';
-import NavBar from './component/navBar/NavBar';
-import Login from './component/Login/Login';
+import "./App.css";
+import NavBar from "./component/navBar/NavBar";
+import Login from "./component/Login/Login";
 
 function App() {
   return (

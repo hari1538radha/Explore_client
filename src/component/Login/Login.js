@@ -12,13 +12,13 @@ const Login = () => {
   const Navigate = useNavigate();
   const dispatch = useDispatch();
   const [Error, setError] = useState("");
-  
+
   const signIn = (e) => {
     e.preventDefault();
     const ele = e.target.elements;
     const userEmail = ele[0].value;
     const userPassword = ele[1].value;
-    dispatch(getUser( {userEmail, userPassword} ));
+    dispatch(getUser({ userEmail, userPassword }));
     ele[0].value = "";
     ele[1].value = "";
   };

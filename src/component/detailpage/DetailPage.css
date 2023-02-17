@@ -4,55 +4,55 @@
 } */
 
 .card {
-    flex-direction: row;
-    display: flex;
+  flex-direction: row;
+  display: flex;
 }
 
 .detail-image {
-    width: 587px;
-    top: 0px;
-    border-radius: 25px;
-    float: right;
+  width: 587px;
+  top: 0px;
+  border-radius: 25px;
+  float: right;
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0px;
-    margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 
 .text-content {
-    width: 828px;
+  width: 828px;
 }
 
 .detail-image {
-    display: flex;
-    width: 587px;
-    height: 359px;
-    margin-right: 25px;
-    margin-top: 17px;
+  display: flex;
+  width: 587px;
+  height: 359px;
+  margin-right: 25px;
+  margin-top: 17px;
 }
 
 .card body {
-    background-color: burlywood;
+  background-color: burlywood;
 }
 
 .outer {
-    margin-left: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .text {
-    margin-top: 25px;
-    color: #7A7272;
+  margin-top: 25px;
+  color: #7a7272;
 }
 
 .hashtag {
-    color: #B0ACAC;
+  color: #b0acac;
 }
 
 .tittle {
-    margin-top: 17px;
+  margin-top: 17px;
 }

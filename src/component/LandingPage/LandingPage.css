@@ -200,15 +200,14 @@ button {
   border-radius: 5px;
   margin-bottom: 12px;
 }
-.loader{
+.loader {
   position: absolute;
-  left:0px;
-  top:100px;
+  left: 0px;
+  top: 100px;
   width: 500px;
   height: 500px;
 }
-.loader-class
-{
+.loader-class {
   display: flex;
 }
 .Main_Container {
