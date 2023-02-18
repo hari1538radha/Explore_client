@@ -19,6 +19,7 @@ const DetailsPage = () => {
     dispatch(searchDetails(id));
     setDetails(detailData.data);
   console.log(details);
+  console.log(id)
 
   }, []);
 
