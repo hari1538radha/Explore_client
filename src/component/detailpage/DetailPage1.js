@@ -1,31 +1,52 @@
-import React from "react";
-// import { mockData } from "../mockdata/detailpageMockdata";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { card } from "react-bootstrap";
 import "./DetailPage.css";
+import { useLocation } from "react-router-dom";
+import { searchDetails } from "../../Redux/Slice/SearchSlice";
+import { useState } from "react";
 const DetailsPage = () => {
+  const dispatch = useDispatch();
+  const Location = useLocation();
+  const [details, setDetails] = useState();
+  console.log(Location?.state?.id);
+  const id = Location?.state?.id;
+  const { data, loading, detailData, DetailLoading } = useSelector(
+    (state) => state.Search
+  );
+  useEffect(() => {
+    dispatch(searchDetails(id));
+    setDetails(detailData.data);
+  console.log(details);
+
+  }, []);
 
   return (
     <div className="outer">
       <div className="content">
-        <div className="text-content">
-          <h1 className="tittle">Paris</h1>
-          <p className="hashtag">#paris#europe#city</p>
-          <p className="text">
-            The most populous city of France. Since the 17th century, Paris has
-            been one of Europe's major centres of finance, diplomacy, commerce,
-            fashion, gastronomy, science and arts.
-          </p>
-          <p className="creator">Created By:MasterClass</p>
-          <p className="duration">6 hours ago</p>
-        </div>
-        <div className="image">
-          <img
-            className="detail-image"
-            src="https://hdwallpaperim.com/wp-content/uploads/2017/08/31/149631-HDR-France-Paris-cityscape.jpg"
-            alt="paris"
-          />
-        </div>
+        {DetailLoading === false  && (
+            <div>
+              <div className="text-content">
+                <h1 className="tittle">{details?.placeName}</h1>
+                <p className="hashtag">{details?.placeTag}</p>
+                <p className="text">
+                 {details?.placeDescription}
+                </p>
+                <p className="creator">Created By:MasterClass</p>
+                <p className="duration">6 hours ago</p>
+              </div>
+              <div className="image">
+                <img
+                  className="detail-image"
+                  src={details?.placeImage}
+                  alt="paris"
+                />
+              </div>
+            </div>
+            )
+            }
+
         {/* <p className="DetailPage-PostTime">{mockData[1].Time}</p> */}
       </div>
     </div>

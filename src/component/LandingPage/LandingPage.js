@@ -35,6 +35,12 @@ const LandingPage = () => {
   const handleDetailpage = (e) => {
     e.preventDefault();
     console.log(e.target.id);
+    const id = e.target.id;
+    Navigate("/LandingPage/Detailpage", {
+      state: {
+        id: id,
+      },
+    });
   };
 
   const handleSearch = (e) => {
