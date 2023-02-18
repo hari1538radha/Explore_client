@@ -17,11 +17,13 @@
 
 .content {
   display: flex;
-  justify-content: space-between;
+  width: 100vw;
   padding-top: 0px;
   margin-top: 0px;
 }
-
+.detail-container{
+  display: flex;
+}
 .text-content {
   width: 828px;
 }

@@ -39,7 +39,7 @@ const SearchedData = createSlice({
     },
     [searchDetails.fulfilled]: (state, action) => {
       state.DetailLoading = false;
-      state.detailData = action.payload.data;
+      state.detailData = action.payload;
     },
     [searchDetails.rejected]: (state, action) => {
       state.DetailLoading = true;

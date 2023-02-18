@@ -38,7 +38,9 @@ const LandingPage = () => {
     const id = e.target.id;
     Navigate("/LandingPage/Detailpage", {
       state: {
-        id: id,
+       
+        data:Display,
+        id: id
       },
     });
   };
@@ -172,7 +174,7 @@ const LandingPage = () => {
                     id={obj._id}
                     alt="suggest"
                   />
-                  <div class="top-left">
+                  <div id={obj._id} class="top-left">
                     <p id={obj._id}>
                       {loginData?.data?.username}
                       <br />

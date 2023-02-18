@@ -6,6 +6,7 @@ import "./DetailPage.css";
 import { useLocation } from "react-router-dom";
 import { searchDetails } from "../../Redux/Slice/SearchSlice";
 import { useState } from "react";
+import loader from "../Images/copper-loader.gif";
 const DetailsPage = () => {
   const dispatch = useDispatch();
   const Location = useLocation();
@@ -17,17 +18,27 @@ const DetailsPage = () => {
   );
   useEffect(() => {
     dispatch(searchDetails(id));
-    setDetails(detailData.data);
-  console.log(details);
-  console.log(id)
+  
 
   }, []);
+  useEffect(() => {
+    setDetails(detailData?.data?.data);
+    console.log(details);
+  }, [detailData])
+  
 
   return (
     <div className="outer">
       <div className="content">
+        {
+          DetailLoading === true  &&
+          <div className="loader-class">
+          <h1>Loading Data....!</h1>
+          <img src={loader}></img>
+        </div>
+        }
         {DetailLoading === false  && (
-            <div>
+            <div className="detail-container">
               <div className="text-content">
                 <h1 className="tittle">{details?.placeName}</h1>
                 <p className="hashtag">{details?.placeTag}</p>
@@ -41,7 +52,7 @@ const DetailsPage = () => {
                 <img
                   className="detail-image"
                   src={details?.placeImage}
-                  alt="paris"
+                  alt={details?.placeName}
                 />
               </div>
             </div>
