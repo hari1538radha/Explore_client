@@ -6,7 +6,7 @@ import logOutLogo from "../Images/carbon_power.svg";
 
 import { SearchData } from "../../Redux/Slice/SearchSlice";
 import { useDispatch } from "react-redux";
-
+import { useNavigate } from "react-router-dom";
 import Upload from "./Upload";
 import Display from "./Display";
 const LandingPage = () => {
@@ -21,23 +21,29 @@ const LandingPage = () => {
     console.log(location, tag);
     dispatch(SearchData({ location, tag }));
   };
-
+  const navigate = useNavigate()
+  const handellogout = () =>
+  {
+    // navigate("/")
+  }
   return (
     <>
-      <div className="NavBarConatiner">
+    <div className="NavBarConatiner">
         <img className="Logo" src={Logo} />
         <div className="UserName_block">
           {/* <div className="User_image_Block">
             <img src={logOutLogo} className="user_Image"></img>
           </div> */}
           <p className="UserName">User</p>
-          <button className="Btn-signin-landing">
+          <button onClick={handellogout} className="Btn-signin-landing">
             <img src={logOutLogo}></img>
           </button>
         </div>
-<Display/>
 
       </div>
+      <div className="flex">
+      
+      <Display/>
       
       <div className="Right-container">
         <form onSubmit={handleSearch}>
@@ -61,7 +67,8 @@ const LandingPage = () => {
         </form>
         <Upload />
       </div>
-    </>
+    </div></>
+   
   );
 };
 

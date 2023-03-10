@@ -96,7 +96,7 @@ const Display = () => {
                     <p id={obj._id}>
                       {loginData?.data?.username}
                       <br />
-                      <moment id={obj._id}>({obj.createdAt})</moment>
+                      {/* <moment id={obj._id}>({obj.createdAt})</moment> */}
                     </p>
                   </div>
                   <div id={obj._id} className="hashtags">

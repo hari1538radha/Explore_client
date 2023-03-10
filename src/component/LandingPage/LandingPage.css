@@ -93,8 +93,11 @@
   gap: 10px;
   row-gap: 29px;
   position: relative;
+  
 }
-
+.flex{
+  display:flex;
+}
 .card-title {
   font-family: "Poppins";
   font-style: normal;
