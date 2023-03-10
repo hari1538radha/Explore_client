@@ -6,7 +6,7 @@ import "./DetailPageSuggest.css";
 const PostSuggest = () => {
   return (
     <div main-div>
-      <p className="message">you might also like:</p>
+      {/* <p className="message">you might also like:</p>
       <div className="outer-div">
         <div class="container">
           <img
@@ -111,6 +111,7 @@ const PostSuggest = () => {
           </p>
         </div>
       </div>
+    </div> */}
     </div>
   );
 };
